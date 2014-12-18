@@ -35,14 +35,14 @@ cacheSolve<- function(x, ...) {
   i
 }
 
-## This functions displays the error of the inverse , it is not needed
-## Serves as debugging aid.
+# This functions displays the error of the inverse , it is not needed
+# Serves as debugging aid.
 
-# # checkInv<-function(A,Ainv){
-# # oneway<-A%*%Ainv;
-# # twoway<-Ainv%*%A;
-  # # iden<-diag(nrow(A));
-# # cat('The A*B error is:',sum(iden-oneway),
-    # # '\nThe B*A error is:',sum(iden-twoway))
+checkInv<-function(A,Ainv){
+oneway<-A%*%Ainv;
+twoway<-Ainv%*%A;
+  iden<-diag(nrow(A));
+cat('The A*B error is:',sum(iden-oneway),
+    '\nThe B*A error is:',sum(iden-twoway))
   
-# # }
+}
